@@ -19,7 +19,7 @@ All repositories follow **lowercase kebab-case** with a **product-first** naming
 **Rules:**
 
 - Always use lowercase kebab-case (`this-format`, never `ThisFormat` or `this_format`)
-- Do not prefix with `px-` — all repos are already under the PXTEAMS org
+- Do not prefix with `px-` — all repos are already under the PXTEAMS org and therefore part of PX
 - Product name comes first, then the subfunctionality
 - Use descriptive suffixes: `-service`, `-demo`, `-docs`
 - Keep names concise
