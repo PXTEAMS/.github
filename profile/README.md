@@ -57,7 +57,7 @@ Reusable actions are maintained in the [`actions`](https://github.com/PXTEAMS/ac
 
 All repositories should (eventually) use GitHub Actions for CI/CD. Workflows follow these conventions:
 
-- Runner selection defaults to repo-level variable: `${{ vars.RUNNER_GROUP || 'ubuntu-latest' }}`
+- Jobs run on the arm64 pool through the org variable: `${{ vars.PLATFORM_RUNNERS_ARM64 || 'ubuntu-24.04-arm' }}`. Only a job with a concrete amd64 need (an amd64-only binary, action or native image build) uses `${{ vars.PLATFORM_RUNNERS_X64 || 'ubuntu-latest' }}`
 - Workflows use path-based filtering (via `dorny/paths-filter`) to avoid unnecessary builds in monorepo setups
 - Azure authentication uses OIDC (federated credentials), not stored secrets
 - Reusable workflows are stored in the respective repo under `.github/workflows/`
